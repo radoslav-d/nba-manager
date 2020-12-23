@@ -1,0 +1,11 @@
+<div class="teams-component"
+     *ngIf="teams">
+  <div class="team-card"
+       *ngFor="let team of teams">
+    <div>Name: {{team.name}}</div>
+    <div>City: {{team.city}}</div>
+    <div>Abbreviation: {{team.abbreviation}}</div>
+    <div>Conference: {{team.conference}}</div>
+    <div>Division: {{team.division}}</div>
+  </div>
+</div>

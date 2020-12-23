@@ -1,0 +1,40 @@
+.games-component {
+  padding: 50px 80px;
+
+  .games-search-field {
+    margin: 0 35%;
+    display: inline-flex;
+
+    .games-input {
+      margin-right: 5px;
+      max-width: 300px;
+    }
+  }
+
+  .games-searched {
+    margin: 10px;
+    width: 280px;
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 5px;
+  }
+
+  .games-page-navigation {
+    display: inline-flex;
+    margin: 20px 32%;
+    .games-nav-el {
+      margin: 10px;
+      visibility: hidden;
+    }
+
+    .games-nav-el-visible {
+      visibility: initial;
+    }
+
+    .games-current-page {
+      padding-top: 7px;
+    }
+  }
+}
+

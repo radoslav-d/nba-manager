@@ -1,0 +1,12 @@
+<div class="navigation">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <span class="navbar-brand">NBA Manager</span>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link"
+           *ngFor="let route of routes"
+           [routerLink]="[route.link]">{{route.displayName}}</a>
+      </div>
+    </div>
+  </nav>
+</div>

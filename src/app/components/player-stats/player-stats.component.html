@@ -1,0 +1,51 @@
+<div class="stats-component">
+  <div class="stats-season-search-player">
+    <app-single-player *ngIf="player"
+                       [player]="player"
+                       [hideStats]="true"></app-single-player>
+    <div class="stats-season-search">
+      <div class="stats-season-search-label">
+        Average statistics for season:
+      </div>
+      <input class="form-control stats-season-search-input"
+             placeholder="YYYY"
+             [(ngModel)]="season">
+      <button class="btn btn-outline-primary"
+              (click)="fetchSeasonAverages()">Search</button>
+    </div>
+  </div>
+  <table class="table"
+         *ngIf="seasonAverages">
+    <thead>
+      <tr>
+        <th scope="col">Games</th>
+        <th scope="col">Minutes</th>
+        <th scope="col">Points</th>
+        <th scope="col">Assists</th>
+        <th scope="col">Rebounds</th>
+        <th scope="col">Blocks</th>
+        <th scope="col">Steals</th>
+        <th scope="col">Turnovers</th>
+        <th scope="col">Field goal %</th>
+        <th scope="col">Field goal 3pt %</th>
+        <th scope="col">Free throws %</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">{{seasonAverages.games_played}}</th>
+        <td>{{seasonAverages.min}}</td>
+        <td>{{seasonAverages.pts}}</td>
+        <td>{{seasonAverages.ast}}</td>
+        <td>{{seasonAverages.reb}}</td>
+        <td>{{seasonAverages.blk}}</td>
+        <td>{{seasonAverages.stl}}</td>
+        <td>{{seasonAverages.turnover}}</td>
+        <td>{{seasonAverages.fg_pct}}</td>
+        <td>{{seasonAverages.fg3_pct}}</td>
+        <td>{{seasonAverages.ft_pct}}</td>
+      </tr>
+      <tr></tr>
+    </tbody>
+  </table>
+</div>

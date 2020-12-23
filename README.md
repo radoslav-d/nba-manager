@@ -1,5 +1,56 @@
 # NbaManager
 
+<h1>Welcome!</h1>
+
+<p>
+  My name is Radoslav and I am a student at Technical University of Sofia.
+  I am forth year student in 'Computer and Software engineering' and this application is a course assignment for 'Distributed Environment Programming'.
+</p>
+
+<h4>
+  About the application:
+</h4>
+<p>
+  This application is an Angular based web client for balldontlie.io open API.
+  The application uses Angular HttpModule and consumes the following APIs:
+</p>
+<div>
+  GET /players
+</div>
+<div>
+  GET /players/:id
+</div>
+<div>
+  GET /teams
+</div>
+<div>
+  GET /teams/:id
+</div>
+<div>
+  GET /games
+</div>
+<div>
+  GET /games/:id
+</div>
+<div>
+  GET /stats
+</div>
+<div>
+  GET /season_averages
+</div>
+<p>
+  The application compiles SCSS styles. Bootstrap 4 library is used for additional styling - buttons, inputs, tables, navigation and etc.
+  There is implemented navigation component using Angular Router. Some of the components (for players and games) implement paging functionality.
+  Going through pages triggers rest calls to the API, which support pagination.
+  The user can track different information regarding NBA league. Possible options are:
+</p>
+<ul>
+  <li>view teams</li>
+  <li>search players</li>
+  <li>view players stats for different seasons</li>
+  <li>view finished and ongoing games</li>
+</ul>
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 
 ## Development server

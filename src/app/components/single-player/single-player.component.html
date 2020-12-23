@@ -1,0 +1,10 @@
+<div class="single-player-card">
+  <div>Name: {{player.first_name}} {{player.last_name}}</div>
+  <div>Team: {{player.team.full_name}}</div>
+  <div>Position: {{player.position || 'N/A'}}</div>
+  <div>Height: {{getHeight()}}</div>
+  <div>Weight: {{getWeight()}}</div>
+  <div *ngIf="!hideStats">
+    <a [routerLink]="['/stats', player.id]">Show stats</a>
+  </div>
+</div>

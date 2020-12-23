@@ -1,0 +1,23 @@
+.stats-component {
+  padding: 20px;
+
+  .stats-season-search-player {
+    display: flex;
+    margin: 30px;
+
+    .stats-season-search {
+      display: inline-flex;
+      margin: 50px;
+
+      .stats-season-search-label {
+        min-width: 230px;
+      }
+
+      .stats-season-search-input {
+        max-width: 300px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,27 @@
+<div class="players-component">
+  <div class="players-search-field">
+    <input class="form-control players-input"
+           [(ngModel)]="search"
+           placeholder="Enter player`s name">
+    <button class="btn btn-outline-primary"
+            (click)="initialSearch()">Search</button>
+  </div>
+  <div>
+    <div class="players-searched"
+          *ngFor="let player of players">
+    <app-single-player [player]="player"></app-single-player>
+  </div>
+  </div>
+  <div class="players-page-navigation">
+    <button class="btn btn-outline-primary players-nav-el"
+            [ngClass]="{'players-nav-el-visible': hasPrevious()}"
+            (click)="previousPage()">Previous page</button>
+    <div class="players-nav-el players-current-page"
+         [ngClass]="{'players-nav-el-visible': pageMetadata}">
+      Current page: {{pageMetadata && pageMetadata.current_page}}
+    </div>
+    <button class="btn btn-outline-primary players-nav-el"
+            [ngClass]="{'players-nav-el-visible': hasNext()}"
+            (click)="nextPage()">Next page</button>
+  </div>
+</div>

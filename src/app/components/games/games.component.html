@@ -1,0 +1,30 @@
+<div class="games-component">
+  <div class="games-search-field">
+    <input class="form-control games-input"
+           [(ngModel)]="searchSeason"
+           placeholder="Enter season">
+    <button class="btn btn-outline-primary"
+            (click)="initialSearch()">Search</button>
+  </div>
+  <div>
+    <div class="games-searched"
+         *ngFor="let game of games">
+      <div>Home: {{game.home_team.full_name}} - {{game.home_team_score}}</div>
+      <div>Away: {{game.visitor_team.full_name}} - {{game.visitor_team_score}}</div>
+      <div>Date: {{game.date.substr(0, 10)}}</div>
+      <div>Status: {{game.status}}</div>
+    </div>
+  </div>
+  <div class="games-page-navigation">
+    <button class="btn btn-outline-primary games-nav-el"
+            [ngClass]="{'games-nav-el-visible': hasPrevious()}"
+            (click)="previousPage()">Previous page</button>
+    <div class="games-nav-el games-current-page"
+         [ngClass]="{'games-nav-el-visible': pageMetadata}">
+      Current page: {{pageMetadata && pageMetadata.current_page}}
+    </div>
+    <button class="btn btn-outline-primary games-nav-el"
+            [ngClass]="{'games-nav-el-visible': hasNext()}"
+            (click)="nextPage()">Next page</button>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+.players-component {
+  padding: 50px 100px;
+
+  .players-search-field {
+    margin: 0 35%;
+    display: inline-flex;
+
+    .players-input {
+      margin-right: 5px;
+      max-width: 300px;
+    }
+  }
+
+  .players-searched {
+    margin: 10px;
+    display: inline-flex;
+  }
+
+  .players-page-navigation {
+    display: inline-flex;
+    margin: 20px 32%;
+    .players-nav-el {
+      margin: 10px;
+      visibility: hidden;
+    }
+
+    .players-nav-el-visible {
+      visibility: initial;
+    }
+
+    .players-current-page {
+      padding-top: 7px;
+    }
+  }
+}
+
