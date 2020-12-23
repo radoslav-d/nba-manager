@@ -50,6 +50,10 @@
   <li>view players stats for different seasons</li>
   <li>view finished and ongoing games</li>
 </ul>
+<p>
+  The Angular application is finally deployed to Cloud Foundry via MTA deployment.
+  Additional bash script is added, which installs the dependencies, builds the angular project to static files and performs MTA deployment.
+</p>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 

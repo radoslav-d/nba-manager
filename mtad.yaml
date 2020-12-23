@@ -1,0 +1,8 @@
+_schema-version: 3
+ID: nba-manager
+version: 1.0.0
+
+modules:
+  - name: nba-manager
+    path: dist/nba-manager
+    type: staticfile
